@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="theme-color" content="white">
+    <title>ISS Location</title>
+    <script src="https://iss-location.s40.repl.co/static/js/check.js">
+    </script>
+    <style>
+      h1 {
+        color: black;
+      }
+      p {
+        color: black;
+      }
+      body {
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1> The ISS is currently at: </h1>
+    <p id="units">
+      Units = 
+    </p>
+    <br>
+    <p id="longitude"> 
+       Loading...
+    </p>
+    <p id="latitude">
+      Loading...
+    </p>
+    <p id="altitude">
+      Loading...
+    </p>
+    <p id="velocity">
+      Loading...
+    </p>
+    <p id="visibility">
+      Loading...
+    </p>
+    <p id="timestamp">
+      Last updated = 
+    </p>
+    <a href="/">View in miles</a>
+    <script>
+      findLocation("kilometers");
+      setInterval(findLocation, 2000, 'kilometers');
+    </script>
+  </body>
+</html>
